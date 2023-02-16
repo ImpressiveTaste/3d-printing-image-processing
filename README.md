@@ -20,4 +20,18 @@ and a plot of the proportion of yellow pixels in each bar is generated for each 
 The plot is saved to a file with a filename based on the value of k. Finally, the plot is closed and the loop moves on to the next value of k.
 
 
+##Description of the file extension_combination.m
+
+This MATLAB code is used to load data from several mat files and compute the average value of a set of proportions stored in the loaded data.
+The code loads data from six mat files using the load function, and then computes the mean of the proportion values
+for each file using the mean function. The resulting means are stored in six separate variables.
+
+The code then uses a for loop to compute a weighted sum of the means for each bar in the image.
+The resulting sum is stored in the proportion_signal_dynamic array, where each element corresponds to a different bar in the image.
+
+The weights used in the computation of the sum are determined by the interval of values for each loaded mat file. 
+For example, the mean proportion values for the proportion_0_100 mat file are multiplied by a weight of 50,
+since the range of values for that file is 0 to 100.
+
+
 
