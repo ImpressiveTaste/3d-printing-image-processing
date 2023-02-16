@@ -33,5 +33,10 @@ The weights used in the computation of the sum are determined by the interval of
 For example, the mean proportion values for the proportion_0_100 mat file are multiplied by a weight of 50,
 since the range of values for that file is 0 to 100.
 
+##extension_data_processing decription: 
 
+This code is used for image processing and analysis. It loads a set of image files,
+and then for each file it extracts certain features from the image and calculates the proportion of certain colors
+(black and yellow) in different parts of the image. The code then plots the proportion of black pixels in
+each of the 13 regions of the image, and saves the resulting plot as an image file.
 
