@@ -40,5 +40,27 @@ and then for each file it extracts certain features from the image and calculate
 (black and yellow) in different parts of the image. The code then plots the proportion of black pixels in
 each of the 13 regions of the image, and saves the resulting plot as an image file.
 
-## 
+## image_generation description:
+
+The analysis is performed in three parts:
+
+The first section of the code loads the "proportion" variable from a file called "result.mat".
+
+The second section of the code calculates the average value of the "proportion" data,
+where "proportion" refers to the proportion of yellow pixels in different regions of an image.
+The average is calculated in two different ways:
+first, by averaging all the data and ignoring any missing values; 
+and second, by averaging only the first 97 rows of the data (which correspond to the first 97 layers).
+
+The third section of the code generates plots of the "proportion" data.
+The first set of plots shows the trajectory of the "proportion" data for each of the 13 regions,
+as a function of layer number. The second set of plots shows the trajectory of
+the "proportion" data for all 13 regions on the same graph.
+
+The plots are all generated using MATLAB's plotting functions,
+and the resulting images are saved to disk using the "saveas" function.
+The code also sets various properties of the plot, such as the axis labels, titles, and font sizes.
+The "close" command is used to close each figure after it is saved to disk, to prevent memory leakage.
+
+
 
